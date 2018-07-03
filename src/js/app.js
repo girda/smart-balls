@@ -22,12 +22,12 @@ let img = new Image();
 let images = ['img/google-plus.svg','img/facebook.svg','img/snow-middle.svg'];
 let i = 0;
 
-let setTimeout1 = setTimeout( function tick() {
+let changeUrlImg = setTimeout( function tick() {
   if ( i >= images.length ) i = 0;
   img.src = images[i];
   i++;
   img.onload = getCoordsSvg;
-  setTimeout1 = setTimeout(tick, 5000);
+  changeUrlImg = setTimeout(tick, 5000);
 }, 0);
 
 let mouse = new Ball(0,0,30,'transparent');
